@@ -28,24 +28,43 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.1.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title"></div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/02/11/python/module/">Day1:python学习之python模块</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-11</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-02-11</span></span></div></header><div class="post-body"><div class="post-excerpt">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.1.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title"></div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/02/12/python/module/">page</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-12</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-02-12</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h1 id="python-模块"   >
           <a href="#python-模块" class="heading-link"><i class="fas fa-link"></i></a><a href="#python-模块" class="headerlink" title="python 模块"></a>python 模块</h1>
       <ul>
 <li>定义：一个以.py结尾的python文件,包含所定义的类、变量、函数等等</li>
 <li>通过import关键字进行调用，import语句一般在文件头部，import语句的使用方式主要有两种<ul>
-<li>import [模块名]<ul>
+<li><code>import [模块名]</code><ul>
 <li>可以引用模块中的所有内容（定义的类、定义的方法、变量、实例化的对象等等）  <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">print(&quot;python解释器自动查找所需模块的列表为：&quot;,sys.path)</span><br></pre></td></tr></table></div></figure>
-  <img src="/Users/5580-2525/Desktop/sys_path.png" alt="sys.path运行结果"></li>
+  <img src="/source/_posts/python/module/sys_path.png" alt="sys.path运行结果"></li>
 </ul>
 </li>
-<li>from [模块名] import [引用的内容]<ul>
+<li><code>from [模块名] import [引用的内容]</code><ul>
 <li>引用的内容包括所定义的方法、类等等</li>
-<li>内置函数dir(模块名)：<br>  返回模块中定义的内容，以字符串的形式返回</li>
+<li>内置函数<code>dir(模块名)</code>：<br>  返回模块中定义的内容，以字符串的形式返回</li>
 </ul>
+</li>
+<li>import后调用时需要以”模块名.模块中内容进行调用”
+        <h1 id="python-包"   >
+          <a href="#python-包" class="heading-link"><i class="fas fa-link"></i></a><a href="#python-包" class="headerlink" title="python 包"></a>python 包</h1>
+      </li>
+</ul>
+</li>
+<li>定义：一种管理python模块命名空间的方式，采用“包名.模块名”的形式</li>
+<li>调用方式：import语句<ul>
+<li>import item：<ol>
+<li>其中item可以是包，也可以是包中的子模块，但不能是模块中的函数、类、变量等</li>
+<li>使用import引用包内模块后要访问模块内成员需要使用成员访问符号（.）并且需要写出自第一个包到最后模块的全部名称</li>
+</ol>
+</li>
+<li>from package import item：<ol>
+<li>其中item可以是模块，也可以是模块中的函数、变量等</li>
+<li>使用该语句调用后可以直接用模块名调用模块中成员，调用内容为模块中成员时可以直接使用</li>
+</ol>
 </li>
 </ul>
 </li>
+<li>一个目录中包含__init.py__就可以被看作一个包，文件中为区分模块文件名的大小写有一个存放所有模块名的变量名的列表变量__all__，其中存放包内所有子模块名</li>
 </ul>
 </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/02/09/hello-my-blog/">hello my blog</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-02-11</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h1 id="hello-my-blog"   >
