@@ -36,7 +36,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.1.0"></he
 <li>通过import关键字进行调用，import语句一般在文件头部，import语句的使用方式主要有两种<ul>
 <li><code>import [模块名]</code><ul>
 <li>可以引用模块中的所有内容（定义的类、定义的方法、变量、实例化的对象等等）  <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">print(&quot;python解释器自动查找所需模块的列表为：&quot;,sys.path)</span><br></pre></td></tr></table></div></figure>
-  <img src="/source/_posts/python/module/sys_path.png" alt="sys.path运行结果"></li>
+  <img src="/../../_posts/python/module/sys_path.png" alt="sys.path运行结果"></li>
 </ul>
 </li>
 <li><code>from [模块名] import [引用的内容]</code><ul>
@@ -52,12 +52,12 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.1.0"></he
 </li>
 <li>定义：一种管理python模块命名空间的方式，采用“包名.模块名”的形式</li>
 <li>调用方式：import语句<ul>
-<li>import item：<ol>
+<li><code>import item</code>：<ol>
 <li>其中item可以是包，也可以是包中的子模块，但不能是模块中的函数、类、变量等</li>
 <li>使用import引用包内模块后要访问模块内成员需要使用成员访问符号（.）并且需要写出自第一个包到最后模块的全部名称</li>
 </ol>
 </li>
-<li>from package import item：<ol>
+<li><code>from package import item</code>：<ol>
 <li>其中item可以是模块，也可以是模块中的函数、变量等</li>
 <li>使用该语句调用后可以直接用模块名调用模块中成员，调用内容为模块中成员时可以直接使用</li>
 </ol>
